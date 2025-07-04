@@ -7,10 +7,13 @@ import TodoItem from "./components/TodoItem";
 import LoginLogout from "./components/LoginLogout";
 import FormSubmit from "./components/FormSubmit";
 import KeysList from "./components/KeysList";
+import SharingState from "./components/SharingState";
 
 
 function App() {
   const [count, setCount] = useState(0);
+  
+  const[text,setText]=useState('');
 
 
 
@@ -19,10 +22,31 @@ function App() {
     completed:true
   }
 
+  function handleChange(e){
+    setText(e.target.value)
+  }
+
   
 
   return (
     <>
+    
+    <SharingState 
+    label="Input"
+    value={text}
+    onhov={handleChange}
+    />
+    <SharingState 
+    label="Second Input"
+    value={text}
+    
+    />
+    <div>
+        <HandleClick/>
+      </div>
+
+
+
       {/* <div>
         Hello World !
       </div>
@@ -34,10 +58,8 @@ function App() {
       <div>
         <ClassCounter/>
       </div> */}
+{/*       
       
-      <div>
-        <HandleClick/>
-      </div>
       <div>
         <Greeting name="Ayush"/>
       </div>
@@ -57,7 +79,9 @@ function App() {
       </div>
       <div>
         <KeysList/>
-      </div>
+      </div> */}
+
+
 
 
     </>

@@ -21,6 +21,7 @@ function Todo({ todo }) {
       <p>Title: {todo.title}</p>
       <p>Completed: {completed ? 'Yes' : 'No'}</p>
     </div>
+    
   );
 }
 
